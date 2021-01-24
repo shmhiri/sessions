@@ -11,6 +11,32 @@
   </head>
 
   <body>
-    <%= yield %>
+
+        <header class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+  <h1>Sessions</h1>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+               <% if current_user %>
+               <button type="button" class="btn btn-info">zoom</button>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "btn btn-warning" %>
+
+<% else %>
+
+<%= link_to 'Sign up', new_user_registration_path, :class => "btn btn-primary" %>
+<%= link_to 'Sign in' , new_user_session_path, :class => "btn btn-success" %>
+<% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<div class="container">
+    <%= render 'layouts/alerts' %> 
+   
+  
+    <%= yield %> </div>
   </body>
 </html>
