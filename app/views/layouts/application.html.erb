@@ -21,7 +21,9 @@
 
           <ul class="nav navbar-nav navbar-right">
                <% if current_user %>
-               <button type="button" class="btn btn-info">zoom</button>
+               <button onclick="location.href='https://zoom.us/oauth2/login?client_id=tCzVUvPYRoSaB1voL6LNlg&response_type=code&redirect_uri=https%3A%2F%2Fviasession.com%2Fauth%2Fzoom%2Fcallback&state=7724d807a198f016a477b7de28a7df837426fb50fa255a61&_x_zm_rtaid=N-4iRLM5RkSXXgKkaddGwQ.1611510580931.02fbb3626d447a90a5786a19bfd0a605&_x_zm_rhtaid=605'" type="button" class="btn btn-primary">
+         create a meating</button>
+         
     <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "btn btn-warning" %>
 
 <% else %>
@@ -33,7 +35,7 @@
         </div>
       </nav>
     </header>
-<div class="container">
+ <div class="text-center">
     <%= render 'layouts/alerts' %> 
    
   
