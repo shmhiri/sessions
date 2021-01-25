@@ -228,6 +228,9 @@ GEM
       httparty (~> 0.13)
       json (>= 1.8)
       jwt
+    zoomus (0.7.0)
+      httparty (~> 0.13)
+      json (>= 1.8)
 
 PLATFORMS
   x64-mingw32
@@ -252,6 +255,7 @@ DEPENDENCIES
   webdrivers
   webpacker (~> 5.0)
   zoom_rb
+  zoomus
 
 RUBY VERSION
    ruby 2.7.2p137
