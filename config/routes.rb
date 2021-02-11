@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :sessions
-  get 'sessions/index'
+  #resources :sessions
+  #get 'sessions/index'
+  get 'meetings/index'
   get 'pages/meetings'
   root to: 'pages#home'
   devise_for :users
